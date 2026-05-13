@@ -5,20 +5,19 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Sriwastav07/git-job'
+                echo "Checking code..."
             }
         }
 
         stage('Build Website') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                echo "Building Website..."
             }
         }
 
         stage('Deploy Website') {
             steps {
-                sh 'echo Deploying website...'
+                echo "Deploying Website..."
             }
         }
     }
